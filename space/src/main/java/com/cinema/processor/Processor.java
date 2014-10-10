@@ -2,7 +2,6 @@ package com.cinema.processor;
 
 import com.cinema.entity.Movie;
 import com.cinema.entity.Status;
-import com.cinema.entity.Ticket;
 import com.gigaspaces.client.ChangeSet;
 import org.openspaces.core.GigaSpace;
 import org.openspaces.events.EventDriven;
@@ -22,17 +21,18 @@ public class Processor {
     GigaSpace gigaSpace;
 
     @EventTemplate
-    public Movie cancelMovieTemplate(){
+    public Movie newMovieTemplate(){
         Movie template = new Movie();
-        template.setStatus(Status.CANCELED);
+        template.setStatus(Status.NEW);
         return template;
     }
 
     @SpaceDataEvent
-    public Movie cancelMovieAction(Movie movie){
-        Ticket ticket = new Ticket();
-        ticket.setIdMovie(movie.getIdMovie());
-        gigaSpace.change(ticket, new ChangeSet().set("status", Status.CANCELED));
+    public Movie setDirector(Movie movie){
+        if (movie.getDirector() == null){
+            movie.setDirector("Tarantino");
+        }
+        movie.setStatus(Status.VALID);
         return movie;
     }
 

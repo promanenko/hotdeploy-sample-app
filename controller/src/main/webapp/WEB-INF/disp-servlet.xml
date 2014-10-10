@@ -32,12 +32,6 @@ http://www.springframework.org/schema/context
 
     <os-core:giga-space id="gigaSpace" space="space"/>
 
-    <bean id="dataProcessor" class="org.openspaces.remoting.ExecutorSpaceRemotingProxyFactoryBean">
-        <property name="gigaSpace" ref="gigaSpace" />
-        <property name="timeout" value="60000" />
-
-        <property name="serviceInterface" value="com.cinema.DeleteTicketService"/>
-    </bean>
 
 	<bean
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">

@@ -15,6 +15,8 @@ public class Movie implements Serializable{
 	private Integer idMovie;
 	private String title;
 
+    private String director;
+
 	private Integer totalSeats;
 
 	private Integer freeSeats;
@@ -49,7 +51,13 @@ public class Movie implements Serializable{
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Integer getTotalSeats() {
+    public String getDirector() {
+        return director;
+    }
+    public void setDirector(String director) {
+        this.director = director;
+    }
+    public Integer getTotalSeats() {
 		return totalSeats;
 	}
 	public void setTotalSeats(Integer totalSeats) {

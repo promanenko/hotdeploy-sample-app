@@ -13,8 +13,6 @@
         <module>space</module>
         <module>controller</module>
         <module>common</module>
-        <module>service-dao</module>
-        <module>service-interfaces</module>
     </modules>
     <properties>
         <jackson.version>2.4.0</jackson.version>
