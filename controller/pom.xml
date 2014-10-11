@@ -25,18 +25,6 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>Id</groupId>
-            <artifactId>service-interfaces</artifactId>
-            <version>1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>Id</groupId>
-            <artifactId>service-dao</artifactId>
-            <version>1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
