@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
 */
 @EventDriven @Polling
-public class ProcessorProc {
+public class ProcessorV1 {
 
     @Autowired
     GigaSpace gigaSpace;
